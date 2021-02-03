@@ -28,14 +28,14 @@ const IndexPage = ({ data }) => {
             >
                 {pageInfo.hasPreviousPage ? (
                     <Link
-                        to={`${pageInfo.currentPage === 2 ? "/blog" : `/blog/${pageInfo.currentPage - 1}`}`}
+                        to={`${pageInfo.currentPage === 2 ? "/" : `/${pageInfo.currentPage - 1}`}`}
                     >Previous
                     </Link>
                 ) : (
                         <div />
                     )}
                 {pageInfo.hasNextPage && (
-                    <Link to={`/blog/${pageInfo.currentPage+1}`}>Next</Link>
+                    <Link to={`/${pageInfo.currentPage+1}`}>Next</Link>
                 )}
             </div>
         </Layout >

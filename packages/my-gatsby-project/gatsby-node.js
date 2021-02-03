@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         createNodeField({
             node,
             name: `slug`,
-            value: `/blog${slug}`,
+            value: `${slug}`,
         })
     }
 
@@ -57,7 +57,7 @@ exports.createPages = async function ({ actions, graphql }) {
     })
 
 
-    const perPage = 2;
+    const perPage = 5;
     const nbPage = Math.ceil(data.allMdx.totalCount / perPage)
 
     for (let i = 0; i < nbPage; i++) {
@@ -66,7 +66,7 @@ exports.createPages = async function ({ actions, graphql }) {
         //Creation de la page Index des posts
         actions.createPage({
             // path: '/blog',
-            path: i < 1 ? "/blog" : `/blog/${i+1}`,
+            path: i < 1 ? "/" : `/${i+1}`,
             component: require.resolve(`./src/templates/list.js`),
             context: {
                 limit: perPage,

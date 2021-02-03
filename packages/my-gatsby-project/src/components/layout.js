@@ -10,11 +10,13 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import ColorRed from './ColorRed';
-
+import MdxTabs from './MdxTabs';
 import Header from "./header"
 import "./layout.css"
 
-const shortcodes = { ColorRed }
+
+
+const shortcodes = { ColorRed, MdxTabs }
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
