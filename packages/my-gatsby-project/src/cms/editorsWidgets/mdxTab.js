@@ -8,6 +8,9 @@ const mdxTab = {
     pattern: /^<MdxTabs content=\{(.*)\}/, 
         //pattern: /^<MdxTabs.*/,
     fromBlock: function (match) {
+      console.log(match)
+      console.log(match[0])
+      
       const content = match && match[0] && match[0].matchAll(/^<MdxTabs content=\{(.*)\}/g)
       console.log(content)
       if(!(content && content[1])){

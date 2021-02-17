@@ -1,7 +1,8 @@
 import CMS from "netlify-cms-app"
 import youtube from './editorsWidgets/youtube';
 import mdxTab from './editorsWidgets/mdxTab';
-import imageAndText from './editorsWidgets/imageAndText'
+
+import imageInText from "./editorsWidgets/imageInText";
 
 
 //import { CustomWidgetControl } from './customWidget/CustomWidgetControl';
@@ -11,4 +12,4 @@ import imageAndText from './editorsWidgets/imageAndText'
 
 CMS.registerEditorComponent(youtube);
 CMS.registerEditorComponent(mdxTab);
-CMS.registerEditorComponent(imageAndText);
+CMS.registerEditorComponent(imageInText);

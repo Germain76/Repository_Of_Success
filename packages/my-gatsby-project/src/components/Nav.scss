@@ -21,4 +21,24 @@
       }
     }
   }
+
+
+  .MdxTextImage{
+    display: flex;
+    align-items: center;
+    span.img{
+      flex-shrink: 0;
+      height: 100%;
+      padding: 0 15px 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &.right{
+      flex-direction: row-reverse;
+      span.img{
+        padding: 0 0 0 15px;
+      }
+    }
+  }
   
