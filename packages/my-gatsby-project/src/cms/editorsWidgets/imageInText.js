@@ -17,15 +17,15 @@ const imageInText = {
     fromBlock: function (match) {
         console.log(match)
         let content = match && match[0] && match[0].matchAll(/"(.+?)"/g)
-        let contentText = match && match[0] && match[0].match(/>(.+?)</)
+        let contentText = match && match[0] && match[0].match(/>(\n*.+?\n*)</)
         content = Array.from(content)
         let matchImage = content[0]
         let matchAuthor = content[1]
         let matchTitle = content[2]
-        console.log(matchImage[1])
-        console.log(matchAuthor[1])
-        console.log(matchTitle[1])
-        console.log(contentText[1])
+        //console.log(matchImage[1])
+        //console.log(matchAuthor[1])
+        //console.log(matchTitle[1])
+         console.log(contentText[1])
 
 
         if (!(content && contentText && content[0] && content[1] && content[2] && contentText[1])) {

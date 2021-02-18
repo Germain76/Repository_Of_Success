@@ -3,6 +3,7 @@ import youtube from './editorsWidgets/youtube';
 import mdxTab from './editorsWidgets/mdxTab';
 
 import imageInText from "./editorsWidgets/imageInText";
+import partenaire from "./editorsWidgets/partenaire";
 
 
 //import { CustomWidgetControl } from './customWidget/CustomWidgetControl';
@@ -13,3 +14,4 @@ import imageInText from "./editorsWidgets/imageInText";
 CMS.registerEditorComponent(youtube);
 CMS.registerEditorComponent(mdxTab);
 CMS.registerEditorComponent(imageInText);
+CMS.registerEditorComponent(partenaire);
