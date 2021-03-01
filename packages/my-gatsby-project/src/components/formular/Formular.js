@@ -6,11 +6,11 @@ function Formular() {
 
 
 
-    const handleChange =(newValue) => setText(newValue);
+    const handleChange = (newValue) => setText(newValue);
     
     
     return (<div>
-        <Email_Data text={text} onChange={handleChange} />
+        <Email_Data text={text} handleChange={handleChange} />
         </div>
 
     );
