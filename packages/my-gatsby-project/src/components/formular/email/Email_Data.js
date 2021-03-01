@@ -1,6 +1,5 @@
-import React from 'react';
-import PropTypes from "prop-types";
-import * as PopTypes from "prop-types";
+import React, { useState } from 'react';
+
 
 export const Email_Data = (props) => {
     const handleChange = (event) => props.onChange(event.target.text);
