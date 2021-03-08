@@ -1,4 +1,4 @@
-import React, { isValidElement, useState } from 'react';
+import React, { useState } from 'react';
 
 
 export const Email_Data = ({ text, handleChange }) => {
@@ -20,6 +20,7 @@ export const Email_Data = ({ text, handleChange }) => {
         }
     }
     const onChange = (event) => {
+        event.preventDefault()
         setValue(event.target.value);
 
     }
@@ -39,8 +40,10 @@ export const Email_Data = ({ text, handleChange }) => {
                 placeholder="Veuillez saisir votre adresse Email dans ce champ s'il vous plait"
             />
             {message}
+            
 
         </label>
+
 
     );
 };
