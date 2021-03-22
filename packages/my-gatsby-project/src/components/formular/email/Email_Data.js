@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 
-export const Email_Data = ({ text, handleChange }) => {
+export const Email_Data = ({ text, handlerChange, regex, label, placeholder}) => {
     const [value, setValue] = useState("");
     
     const [message, setMessage] = useState("");
-
-    const emailRegex = /\S+@\S+\.\S+/;
+    console.log(regex)
+    //const emailRegex = /\S+@\S+\.\S+/;
     const handleBlur = (event) => {
         event.preventDefault()
-        if (emailRegex.test(value)) {
+        if (regex.test(value)) {
             //setIsValid(true)
             setMessage('Email valide')
-            handleChange(value);
+            handlerChange(value);
         } 
         else {
             //setIsValid(false)
@@ -30,14 +30,15 @@ export const Email_Data = ({ text, handleChange }) => {
     //onblur, vérification de la validité de l'email
 
     return (
-        <label>Email
+        <label> {label}
             <input
                 type="email"
+                name="email"
                 value={value}
                 onBlur={handleBlur}
                 onChange={onChange}
                 
-                placeholder="Veuillez saisir votre adresse Email dans ce champ s'il vous plait"
+                placeholder={placeholder}
             />
             {message}
             

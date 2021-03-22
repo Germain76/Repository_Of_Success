@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import {IMaskInput} from 'react-imask';
-export const Numbers = ({ numbers, handleChangeNumbers, name_field }) => {
+export const Numbers = ({ numbers, handlerChange, labelNumber,objCountry}) => {
     const regexNumbers = /^[0-9]*([,.][0-9]*)*$/;
     const [numberValue, setNumberValue] = useState('');
     const [message, setMessage] = useState("");
@@ -27,17 +27,17 @@ export const Numbers = ({ numbers, handleChangeNumbers, name_field }) => {
 
     const handlechange = (event) =>{
         console.log(numberValue)
-        
+
         setNumberValue(event);
-        handleChangeNumbers(numberValue);
+        handlerChange(numberValue);
     }
 
-    return (<label>{name_field}
+    return (<label>{labelNumber} {objCountry}
     <IMaskInput
     mask={Number}
     //radix="."
     value={numberValue}
-
+    name = "numbersFields"
    
    onAccept={handlechange}
      
