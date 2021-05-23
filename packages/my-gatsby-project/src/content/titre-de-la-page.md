@@ -1,6 +1,6 @@
 ---
-title: ALLO
+title: ALLOAZE
 date: 2021-05-23T23:48:51.572Z
-description: TEST
+description: ALLOAZE
 ---
-<MdxTextImage image="image-2.jpeg" author="TEST" title="TEST">  TEST </MdxTextImage>
+<MdxTextImage image="image-2.jpeg" author="ALLOAZE" title="ALLOAZE">  ALLOAZE </MdxTextImage>
