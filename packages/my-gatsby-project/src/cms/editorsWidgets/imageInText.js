@@ -35,7 +35,7 @@ const imageInText = {
             return { image:matchImage[1], author:matchAuthor[1], title: matchTitle[1], text: contentText[1]}
         }
 */
-        if{
+        if (content && contentText && content[0] && content[1] && content[2] && contentText[1]){
            return { image:matchImage[1], author:matchAuthor[1], title: matchTitle[1], text: contentText[1]}
         }
     },
