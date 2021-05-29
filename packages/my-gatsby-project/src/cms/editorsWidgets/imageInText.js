@@ -22,19 +22,22 @@ const imageInText = {
         let matchImage = content[0]
         let matchAuthor = content[1]
         let matchTitle = content[2]
-        //console.log(matchImage[1])
-        //console.log(matchAuthor[1])
-        //console.log(matchTitle[1])
-         console.log(contentText[1])
+        console.log(matchImage[1])
+        console.log(matchAuthor[1])
+        console.log(matchTitle[1])
+        console.log(contentText[1])
 
-
+/*
         if (!(content && contentText && content[0] && content[1] && content[2] && contentText[1])) {
             return { image: "", author: "", title: "", text: "" }
         }
         else {
             return { image:matchImage[1], author:matchAuthor[1], title: matchTitle[1], text: contentText[1]}
         }
-
+*/
+        if{
+           return { image:matchImage[1], author:matchAuthor[1], title: matchTitle[1], text: contentText[1]}
+        }
     },
     toBlock: function ({ image, author, title, text }) {
         //console.log({image,author,title,text})
